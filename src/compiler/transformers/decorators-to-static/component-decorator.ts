@@ -24,6 +24,7 @@ export const componentDecoratorToStatic = (
   }
 
   newMembers.push(createStaticGetter('is', convertValueToLiteral(componentOptions.tag.trim())));
+  newMembers.push(createStaticGetter('name', convertValueToLiteral(componentOptions.tag.trim())));
 
   if (componentOptions.shadow) {
     newMembers.push(createStaticGetter('encapsulation', convertValueToLiteral('shadow')));
